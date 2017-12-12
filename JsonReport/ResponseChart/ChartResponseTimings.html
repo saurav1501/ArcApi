@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>Response Chart</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script src="https://code.highcharts.com/highcharts.js"></script> 
+   <script src="http://code.highcharts.com/modules/exporting.js"></script>
+   <style type="text/css">
+     /* Loading Modals CSS */
+      .loading-modal-opaque {
+         display:    none;
+         position:   fixed;
+         z-index:    1000;
+         top:        0;
+         left:       0;
+         height:     100%;
+         width:      100%;
+     }
+
+     .loading-modal-opaque {
+      background: rgba( 255, 255, 255, 1 ) 
+                     url('http://test.usgbc.org/public/JsonReport/loaderfile/loader.gif') 
+                     50% 50% 
+                     no-repeat;
+     }
+
+     body.loading {
+         overflow: hidden;   
+     }
+
+      body.loading .loading-modal-opaque {
+        display: block;
+     }
+   </style>
+</head>
+<body class="loading">
+<div id="container" style="margin: 0 auto"></div>
+<div class="loading-modal-opaque"></div>
+<input id="width" type="range" value="500" min="1000" max="10000" />
+<script language="JavaScript">
+$(document).ready(function() {
+  var cat = []; 
+  var response = [];
+  var chartSeries = [];
+  var totalDataFiles = 0;
+  var title = {
+      text: 'API response timings'   
+  };
+   
+   var yAxis = {
+      title: {
+         text: 'Response Time(in Seconds)'
+      },
+      plotLines: [{
+         value: 0,
+         width: 1,
+         color: '#808080'
+      }]
+   };   
+
+
+   var json = {};
+    var test = []; 
+    var filenames = [];
+    var url  = 'http://test.usgbc.org/login?from=%2F'; 
+    var userName = '';
+    var password = '';
+    var noMoreData = false;
+    var dir = "/Arc-Testing/";
+    var fileextension = ".json";
+    var chartData = [];
+    $.ajax({
+        url: 'http://test.usgbc.org/public/JsonReport/',
+        success: function (data) {
+            $(data).find("a:contains(.json)").each(function () {
+                //var filename = this.href.replace("http://"+dir, "");
+                var filename = $(this).attr('href').replace('./','');
+                filenames.push(filename);
+                console.log($(this).attr('href').replace('./',''));
+            });
+            getDataFromFiles(filenames);
+        }
+    });
+
+   function getDataFromFiles(filename){
+      var length = filename.length;
+      totalDataFiles = length;
+      for(var i =0;i<length;i++){
+        loadchartData(filename[i],i);
+      }
+   }
+
+  function loadchartData(filename,counter){
+    var length = filename.length;
+    var chart  = $('#container').highcharts();
+   
+    var response =[];
+    var response2 = [];
+   
+    $.getJSON('http://test.usgbc.org/public/JsonReport/'+filename, function(result){
+      var chartData = result.testsuite.testcase;
+      var targetSeries = {};
+      var apiTimings = [];
+      $.each(chartData,function(index,value){
+        apiTimings.push(value.time);
+        if(counter == 0) cat.push(value.name);
+      });
+      targetSeries = {
+        'name':result.testsuite.timestamp,
+        'data':apiTimings,
+        'groupPadding': 5,
+      }
+      chartSeries.push(targetSeries);
+      if(counter == totalDataFiles-1){
+        $('body').removeClass('loading');
+        console.log(chartSeries);
+        var title = {
+           text: 'ARC API response timings'   
+        };
+        var yAxis = {
+           title: {
+              text: 'Response Time(in Seconds)'
+           },
+           plotLines: [{
+              value: 0,
+              width: 1,
+              color: '#808080'
+           }]
+        };
+        var json = {};
+        var chart = {
+          width:4000,
+          height:600
+        }
+        var plotOptions = {
+          series: {
+              stacking: 'normal'
+          }
+        }
+        var xAxis = {
+           categories: cat
+        };
+        var exporting = {
+          width:1500
+        };
+        var tooltip = {
+          headerFormat: '<b>{series.name}</b><br>',
+          pointFormat: 'API - {point.category}<br>Rsponse Time - {point.y} s'
+        }
+
+        var series =  chartSeries;
+        json.chart = chart;
+        //json.plotOptions = plotOptions;
+        json.title = title;
+        json.xAxis = xAxis;
+        json.yAxis = yAxis;
+        json.series = series;
+        json.tooltip = tooltip;
+        json.exporting = exporting;
+        $('#container').highcharts(json);
+      }
+    });   
+  }
+
+  $('#width').on('input', function () {
+      $('#container').highcharts().setSize(this.value, 900, false);
+  });
+});
+</script>
+</body>
+</html>

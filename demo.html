@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Response Chart</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script src="https://code.highcharts.com/highcharts.js"></script> 
+</head>
+<body>
+<div id="container" style="margin: 0 auto"></div>
+<script language="JavaScript">
+$(document).ready(function() {
+   var cat = []; 
+   var response = [];
+   var title = {
+      text: 'API response timings'   
+   };
+ 
+   var yAxis = {
+      title: {
+         text: 'Response Time(in Seconds)'
+      },
+      plotLines: [{
+         value: 0,
+         width: 1,
+         color: '#808080'
+      }]
+   };   
+
+
+   var json = {};
+    var test = [];   
+   $.getJSON('data.json', function(data) {
+        var data = data.testsuite.testcase;
+        $.each(data,function(index,value){
+            cat.push(value.name);
+            response.push(value.time);
+            console.log(value);
+        });
+        var xAxis = {
+           categories: cat
+        };
+        var series =  [
+           {
+              name: 'API response Time',
+              groupPadding:5,
+              data: response
+           }
+        ];
+          json.title = title;
+          json.xAxis = xAxis;
+          json.yAxis = yAxis;
+          json.series = series;
+          $('#container').highcharts(json);
+    });
+
+});
+</script>
+</body>
+</html>

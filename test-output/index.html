@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-APITestCasesSuite">
+              <span class="suite-name border-passed">APITestCasesSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-APITestCasesSuite">
+                    <span>E:\Api Repo\TestArcAPI\src\main\resources\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-APITestCasesSuite">
+                    <span class="test-stats">12 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-APITestCasesSuite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-APITestCasesSuite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-APITestCasesSuite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-APITestCasesSuite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-APITestCasesSuite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">0 methods,   </span>
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-APITestCasesSuite" class="panel APITestCasesSuite">
+        </div> <!-- panel APITestCasesSuite -->
+        <div panel-name="test-xml-APITestCasesSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">E:\Api Repo\TestArcAPI\src\main\resources\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;APITestCasesSuite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.arc.Listeners.RetryListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.arc.Listeners.TestListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;CompleteFlowTest-Building&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;precertification review&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;building&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDBuilding&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;review&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreateAssetPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SignAgreementRegistrationAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.RegistrationPaymentPricingGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PaymentOrderSubmitPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AddAssestTimelinePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AnalysisDataGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AnalysisDataSubmitPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetAppaddPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetAppDeleteAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetCitiesdataPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetCitiesDataDeleteAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetDetailAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetListAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetDocumentAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetPerformanceScorePostAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetPerformanceScoreListAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetSearchAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetTeamMemberAddPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetUpdateforNewAssetPUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetValidationInfoPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssociatedCategoriesAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CountryStatesJSONAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreditGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreditUpdateTeamPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreditUploadDocumentFilePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreditUploadGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreditUploadDELETEAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.DownloadDocumentsAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.EnvironmentSurveyCreatePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.EnvironmentSurveyGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.EnvironmentSurveySummarizeAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ExcelUploadTemplatePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.FeedbackSubmitPostAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.FuelCategoryAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.GetAllDocumentListAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.MetersAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.MeterCreatePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetMeterDetailAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ConsumptionListAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ConsumptionCreatePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ConsumptionDetailAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ConsumptionUpdatePUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.MeterUpdatePUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.MeterDeleteAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.NotificationCreatePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.NotificationGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.NotificationDeleteAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.RegistrationPaymentPricingGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SignAgreemenReviewAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreditUpdatePUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PaymentOrderGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PaymentReviewAutoPaytokenPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PaymentReviewAutoPaymentTokenGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ProjectTeamInfoAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PerformanceComparablesGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ScoreWeightsAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.TeamMemberUpdatePUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.TeamRoleListOptionAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ThirdPartyListAppsAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.TransitSurveyAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.TransitSurveySummarizeSurveyAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.TransitSurveyCreatePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.UserActivityListAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.UserDetailAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.WasteCreatePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.WasteGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.WasteDetailAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.WasteUpdatePUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.WasteDetailDeleteAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AvgPerformaceListGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CO2GetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.GhgCalcGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.GhgGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.NotificationSubscriptionDetailGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.NotificationSubscriptionDetailPutTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.NotificationSubscriptionGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.NotificationSubscriptionPostTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.TemperatureDataDeleteTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.TemperatureDataGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.TemperatureDataPostTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.TemperatureDataZipCodeGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.UserAccessLevelSAPGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.UserDetailsSAPGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.VOCGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.WasteDivertedDataGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.WasteDivertedDataPostTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.WasteGeneratedDataGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.WasteGeneratedDataPostTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.WaterGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosPostAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosDetailsGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosDetailPUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosAssetPostAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosAssetGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosAssetDetailPUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosAssetDetailGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosTeamsPostAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosTeamsGetAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosTeamsPUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosTeamsDELETEAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosAssetDetailDELETEAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PortfoliosDetailDELETEAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreateAssetParksmartPOSTTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AssetListParksmartGetTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.UserLogoutAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AmltojsonTest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PostingJsonDataHttpClient&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CompleteFlowTest-Building --&gt;
+  &lt;test name=&quot;Performance Score-Building&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;performance score&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;building&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDBuilding&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;performance score&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Performance Score-Building --&gt;
+  &lt;test name=&quot;Recertification-Building&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;recertification&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;building&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDBuilding&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;recertification&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Recertification-Building --&gt;
+  &lt;test name=&quot;certification-City&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;review&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;city&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDCity&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;review&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreateAssetPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PaymentOrderSubmitPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AddAssestTimelinePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreditUpdatePUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- certification-City --&gt;
+  &lt;test name=&quot;Performance Score-City&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;performance score&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;city&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDCity&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;performance score&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Performance Score-City --&gt;
+  &lt;test name=&quot;Recertification-City&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;recertification&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;city&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDCity&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;recertification&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Recertification-City --&gt;
+  &lt;test name=&quot;certification-Community&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;review&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;community&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDCommunity&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;review&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreateAssetPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PaymentOrderSubmitPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AddAssestTimelinePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreditUpdatePUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- certification-Community --&gt;
+  &lt;test name=&quot;Performance Score-Community&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;performance score&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;community&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDCommunity&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;performance score&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Performance Score-Community --&gt;
+  &lt;test name=&quot;recertification-Community&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;recertification&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;community&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDCommunity&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;recertification&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- recertification-Community --&gt;
+  &lt;test name=&quot;certification-Transit&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;review&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;transit&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDTransit&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;review&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreateAssetPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.PaymentOrderSubmitPOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.AddAssestTimelinePOSTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.CreditUpdatePUTAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- certification-Transit --&gt;
+  &lt;test name=&quot;Performance Score-Transit&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;performance score&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;transit&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDTransit&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;performance score&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Performance Score-Transit --&gt;
+  &lt;test name=&quot;Recertification-Transit&quot;&gt;
+    &lt;parameter name=&quot;SoReference&quot; value=&quot;recertification&quot;/&gt;
+    &lt;parameter name=&quot;ProjectType&quot; value=&quot;transit&quot;/&gt;
+    &lt;parameter name=&quot;ProjectTypeColumn&quot; value=&quot;ProjectIDTransit&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;STG&quot;/&gt;
+    &lt;parameter name=&quot;rownumber&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;SoReferenceSR&quot; value=&quot;recertification&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.arcapi.testcases.ReviewCertificationPricingAPITest&quot;/&gt;
+      &lt;class name=&quot;com.arcapi.testcases.SubmitReviewPOSTAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Recertification-Transit --&gt;
+&lt;/suite&gt; &lt;!-- APITestCasesSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-APITestCasesSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for APITestCasesSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">CompleteFlowTest-Building (112 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Performance Score-Building (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Recertification-Building (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">certification-City (6 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Performance Score-City (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Recertification-City (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">certification-Community (6 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Performance Score-Community (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">recertification-Community (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">certification-Transit (6 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Performance Score-Transit (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Recertification-Transit (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-APITestCasesSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for APITestCasesSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-APITestCasesSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for APITestCasesSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_APITestCasesSuite');
+function tableData_APITestCasesSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['APITestCasesSuite']= { tableData: data, tableDiv: 'times-div-APITestCasesSuite'}
+return data;
+}
+              </script>
+              <div id="times-div-APITestCasesSuite">
+              </div> <!-- times-div-APITestCasesSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-APITestCasesSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for APITestCasesSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-APITestCasesSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-APITestCasesSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CreateAssetPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">CreateAssetPOSTAPI(STG, building, ProjectIDBuilding, 2)</span>
+                <span class="method-start">41 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.SignAgreementRegistrationAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">SignAgreementRegistrationAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">54 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.RegistrationPaymentPricingGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">RegistrationPaymentPricingGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">65 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PaymentOrderSubmitPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PaymentOrderSubmitPOSTAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">75 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AnalysisDataGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AnalysisDataGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">95 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AnalysisDataSubmitPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AnalysisDataSubmitPOSTAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">105 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssetAppaddPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssetAppaddPOSTAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">114 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssetAppDeleteAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssetAppDeleteAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">142 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssetCitiesdataPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssetCitiesdataPOSTAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">152 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssetCitiesDataDeleteAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssetCitiesDataDeleteAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">162 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssetListAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssetListAPI</span>
+                <span class="method-start">180 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssetPerformanceScoreListAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssetPerformanceScoreListAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">202 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssetSearchAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssetSearchAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">210 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssetValidationInfoPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssetValidationInfoPOSTAPI</span>
+                <span class="method-start">231 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssociatedCategoriesAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssociatedCategoriesAPI</span>
+                <span class="method-start">241 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CountryStatesJSONAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CountryStatesJSONAPI</span>
+                <span class="method-start">250 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CreditGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreditGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">259 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CreditUpdateTeamPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreditUpdateTeamPOSTAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">266 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CreditUploadDocumentFilePOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreditUploadDocumentFilePOSTAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">275 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CreditUploadGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreditUploadGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">282 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CreditUploadDELETEAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreditUploadDELETEAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">289 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.DownloadDocumentsAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">DownloadDocumentsAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">297 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.EnvironmentSurveyGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">EnvironmentSurveyGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">333 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.EnvironmentSurveySummarizeAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">EnvironmentSurveySummarizeAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">341 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.ExcelUploadTemplatePOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ExcelUploadTemplatePOSTAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">348 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.FeedbackSubmitPostAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">FeedbackSubmitPostAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">378 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.FuelCategoryAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">FuelCategoryAPI</span>
+                <span class="method-start">386 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.GetAllDocumentListAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GetAllDocumentListAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">403 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.MetersAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">MetersAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">432 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssetMeterDetailAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssetMeterDetailAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">446 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.ConsumptionListAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ConsumptionListAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">453 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.NotificationCreatePOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">NotificationCreatePOSTAPI</span>
+                <span class="method-start">527 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.NotificationGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">NotificationGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">560 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.NotificationDeleteAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">NotificationDeleteAPI</span>
+                <span class="method-start">567 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.SignAgreemenReviewAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">SignAgreemenReviewAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">574 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.ReviewCertificationPricingAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDBuilding, 2, precertification review)</span>
+                <span class="method-start">594 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.SubmitReviewGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">SubmitReviewGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">605 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PaymentOrderGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PaymentOrderGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">615 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PaymentReviewAutoPaymentTokenGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PaymentReviewAutoPaymentTokenGet(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">627 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.ProjectTeamInfoAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ProjectTeamInfoAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">642 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PerformanceComparablesGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PerformanceComparablesGetAPI</span>
+                <span class="method-start">649 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.ScoreWeightsAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ScoreWeightsAPI</span>
+                <span class="method-start">655 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.TeamRoleListOptionAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TeamRoleListOptionAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">678 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.ThirdPartyListAppsAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ThirdPartyListAppsAPI</span>
+                <span class="method-start">684 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.TransitSurveyAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TransitSurveyAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">690 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.TransitSurveySummarizeSurveyAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TransitSurveySummarizeSurveyAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">701 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.TransitSurveyCreatePOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TransitSurveyCreatePOSTAPI</span>
+                <span class="method-start">707 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.UserActivityListAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">UserActivityListAPI</span>
+                <span class="method-start">713 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.UserDetailAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">UserDetailAPI</span>
+                <span class="method-start">724 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.WasteGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">WasteGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">736 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.WasteDetailAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">WasteDetailAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">742 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AvgPerformaceListGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AvgPerformaceList</span>
+                <span class="method-start">768 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.GhgCalcGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GhgCalcGet(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">788 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.GhgGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GhgGetTestAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">795 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.NotificationSubscriptionDetailGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">NotificationSubscriptionDetail(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">832 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.NotificationSubscriptionGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">NotificationSubscription(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">844 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.TemperatureDataGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TemperatureDataGet(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">875 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.TemperatureDataZipCodeGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TemperatureDataZipCodeGet</span>
+                <span class="method-start">897 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.UserAccessLevelSAPGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">UserAccessLevelSAPGet</span>
+                <span class="method-start">907 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.UserDetailsSAPGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">UserDetailsSAPGet</span>
+                <span class="method-start">917 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.VOCGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">VOCGet(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">927 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.WasteDivertedDataGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">WasteDivertedDataGet(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">937 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.WasteGeneratedDataGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">WasteGeneratedDataGet(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">954 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.WaterGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">WaterGet(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">971 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosPostAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosPostAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">980 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosGetAPI</span>
+                <span class="method-start">993 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosDetailsGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosDetailsGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">999 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosDetailPUTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosDetailPUTAPI(STG, 2)</span>
+                <span class="method-start">1004 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosAssetPostAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosAssetPostAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">1019 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosAssetGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosAssetGetAPI(STG, 2)</span>
+                <span class="method-start">1042 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosAssetDetailPUTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosAssetDetailPUTAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">1049 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosAssetDetailGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosAssetDetailGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">1055 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosTeamsPostAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosTeamsPostAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">1067 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosTeamsGetAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosTeamsGetAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">1072 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosTeamsPUTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosTeamsPUTAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">1095 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosTeamsDELETEAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosTeamsDELETEAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">1105 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosAssetDetailDELETEAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosAssetDetailDELETEAPI(STG, 2)</span>
+                <span class="method-start">1111 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PortfoliosDetailDELETEAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PortfoliosDetailDELETEAPI(STG, ProjectIDBuilding, 2)</span>
+                <span class="method-start">1115 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CreateAssetParksmartPOSTTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreateAssetParksmart</span>
+                <span class="method-start">1122 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.AssetListParksmartGetTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AssetListParksmart</span>
+                <span class="method-start">1150 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.UserLogoutAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">UserLogoutAPI</span>
+                <span class="method-start">1155 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.ReviewCertificationPricingAPITest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1333 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDBuilding, 2, performance score)</span>
+                <span class="method-start">1336 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1356 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDBuilding, 2, recertification)</span>
+                <span class="method-start">1363 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CreateAssetPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1383 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">CreateAssetPOSTAPI(STG, city, ProjectIDCity, 2)</span>
+                <span class="method-start">1387 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PaymentOrderSubmitPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PaymentOrderSubmitPOSTAPI(STG, ProjectIDCity, 2)</span>
+                <span class="method-start">1393 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.ReviewCertificationPricingAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDCity, 2, review)</span>
+                <span class="method-start">1405 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1427 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDCity, 2, performance score)</span>
+                <span class="method-start">1430 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1451 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDCity, 2, recertification)</span>
+                <span class="method-start">1454 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CreateAssetPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1474 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">CreateAssetPOSTAPI(STG, community, ProjectIDCommunity, 2)</span>
+                <span class="method-start">1476 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PaymentOrderSubmitPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PaymentOrderSubmitPOSTAPI(STG, ProjectIDCommunity, 2)</span>
+                <span class="method-start">1482 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.ReviewCertificationPricingAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDCommunity, 2, review)</span>
+                <span class="method-start">1494 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1521 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDCommunity, 2, performance score)</span>
+                <span class="method-start">1526 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1546 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDCommunity, 2, recertification)</span>
+                <span class="method-start">1549 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.CreateAssetPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1576 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">CreateAssetPOSTAPI(STG, transit, ProjectIDTransit, 2)</span>
+                <span class="method-start">1578 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.PaymentOrderSubmitPOSTAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">PaymentOrderSubmitPOSTAPI(STG, ProjectIDTransit, 2)</span>
+                <span class="method-start">1592 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.arcapi.testcases.ReviewCertificationPricingAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDTransit, 2, review)</span>
+                <span class="method-start">1617 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1637 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDTransit, 2, performance score)</span>
+                <span class="method-start">1639 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setBaseUri</span>
+                <span class="method-start">1663 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ReviewCertificationPricingAPI(STG, ProjectIDTransit, 2, recertification)</span>
+                <span class="method-start">1670 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
