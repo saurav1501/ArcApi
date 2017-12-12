@@ -46,10 +46,10 @@ public class CommonMethod extends BaseClass {
 	public static String SubscriptionKey = "06c50a1570bd4d40a7859ec28514b185";
 	public static Response res;
 	public static String fetchedID;
-    public static File formuploadfile = new File("/var/lib/jenkins/workspace/ARC-API/AutomationTesting/TestArcAPI/src/main/resources/file.pdf");
-	public static File excelfile = new File("/var/lib/jenkins/workspace/ARC-API/AutomationTesting/TestArcAPI/src/main/resources/LEED_Dynamic_Plaque_Data_Template_v02.xlsm");
-	public static File file = new File("/var/lib/jenkins/workspace/ARC-API/AutomationTesting/TestArcAPI/src/main/resources/20131104_Certification_Agreement.htm");
-	public static String JsonfileUrl = "/var/lib/jenkins/workspace/ARC-API/AutomationTesting/TestArcAPI/src/main/resources/JsonfileAPI.txt";
+    public static File formuploadfile = new File("/Users/Group10/workspace/ARC-API/AutomationTesting/TestArcAPI/src/main/resources/file.pdf");
+	public static File excelfile = new File("/Users/Group10/workspace/ARC-API/AutomationTesting/TestArcAPI/src/main/resources/LEED_Dynamic_Plaque_Data_Template_v02.xlsm");
+	public static File file = new File("/Users/Group10/workspace/ARC-API/AutomationTesting/TestArcAPI/src/main/resources/20131104_Certification_Agreement.htm");
+	public static String JsonfileUrl = "/Users/Group10/workspace/ARC-API/AutomationTesting/TestArcAPI/src/main/resources/JsonfileAPI.txt";
 	
 	public static void GeneratingAuthCode() {
 
@@ -57,8 +57,8 @@ public class CommonMethod extends BaseClass {
 				.header("Ocp-Apim-Subscription-Key",
 						SubscriptionKey)
 				.spec(reqSpec)
-				.parameters("username", "pkamal@usgbc.org", "password",
-						"initpass").expect().statusCode(200).when()
+				.parameters("username", "saurav@groupten.com", "password",
+						"LEEDg10").expect().statusCode(200).when()
 				.post("/auth/login/").then().contentType(ContentType.JSON)
 				.extract().response().path("authorization_token").toString();
 		
@@ -140,9 +140,9 @@ public static void trimMeterID(){
 public static void ExtentReportConfig() {
 	 Format formatter = new SimpleDateFormat("YYYY-MM-dd");
 	 Date date = new Date();
-	extent = new ExtentReports("/var/lib/jenkins/workspace/ARC-API/AutomationTesting/TestArcAPI/Advance/ARC_API-AutomationReport" + "_" + formatter.format(date) + ".html", false);
+	extent = new ExtentReports("/Users/Group10/workspace/ARC-API/AutomationTesting/TestArcAPI/Advance/ARC_API-AutomationReport" + "_" + formatter.format(date) + ".html", false);
 	
-	extent.loadConfig(new File("/var/lib/jenkins/workspace/ARC-API/AutomationTesting/TestArcAPI/src/main/resources/extent-config.xml"));
+	extent.loadConfig(new File("/Users/Group10/workspace/ARC-API/AutomationTesting/TestArcAPI/src/main/resources/extent-config.xml"));
    Map<String, String> sysInfo = new HashMap<String, String>();
 	sysInfo.put("Environment", "Staging");
    extent.addSystemInfo(sysInfo);
